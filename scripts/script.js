@@ -1,14 +1,14 @@
 // ||| MAIN ||| //
 document.addEventListener("DOMContentLoaded", (event) => {
-    // NAV BAR //
+    // NAV MENU //
     let lastScroll = 0;
-    const navTab = document.getElementById("nav-tab");
+    const navMenu = document.getElementById("nav-menu");
 
     window.addEventListener("scroll", () => {
         const currentScroll =
             window.scrollY || document.documentElement.scrollTop;
 
-        navTab.classList.toggle(
+        navMenu.classList.toggle(
             "hidden",
             currentScroll >= 50 && currentScroll > lastScroll
         );
@@ -23,31 +23,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // TAB BAR //
-    function activateTab(TabID) {
+    function activateNav(NavID) {
         document.querySelectorAll(".active").forEach((content) => {
             content.classList.remove("active");
         });
 
-        document.querySelectorAll(TabID).forEach((content) => {
+        document.querySelectorAll(NavID).forEach((content) => {
             content.classList.add("active");
         });
 
-        sessionStorage.setItem("activeTabID", TabID);
+        sessionStorage.setItem("activeNavID", NavID);
     }
 
-    const activeTabID = sessionStorage.getItem("activeTabID");
+    const activeNavID = sessionStorage.getItem("activeNavID");
 
-    if (activeTabID) {
-        activateTab(activeTabID);
+    if (activeNavID) {
+        activateNav(activeNavID);
     } else {
-        activateTab("#letters");
+        activateNav("#letters");
     }
 
-    document.querySelectorAll(".tab-link").forEach((link) => {
+    document.querySelectorAll(".nav-link").forEach((link) => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
 
-            activateTab(`#${this.id}`);
+            activateNav(`#${this.id}`);
         });
     });
 });
