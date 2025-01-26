@@ -1,0 +1,11 @@
+#nav-menu {
+    font-size: 18px;
+}
+
+.container:hover {
+    transform: unset;
+}
+
+.nav-content.active {
+    grid-template-columns: 1fr;
+}

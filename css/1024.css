@@ -1,0 +1,11 @@
+#nav-menu {
+    font-size: 20px;
+}
+/* body {
+    transform: scale(0.5);
+    overflow: hidden;
+} */
+ 
+.nav-content.active {
+    grid-template-columns: repeat(2, 1fr);
+}

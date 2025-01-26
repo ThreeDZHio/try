@@ -1,4 +1,9 @@
 /* ||| MAIN ||| */
+/* ALL */
+* {
+    box-sizing: border-box;
+}
+
 /* HTML */
 html {
     color: #e0e0e0;
@@ -13,6 +18,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    border: 0;
     overflow: auto;
     box-sizing: border-box;
     background-color: #121212;
@@ -107,34 +113,4 @@ img {
     font-weight: bold;
     font-style: italic;
     font-size: 26px;
-}
-
-/* ||| ADAPTIVITY ||| */
-/* 1024 */
-@media (max-width: 1024px) {
-    #nav-menu {
-        font-size: 20px;
-    }
-    /* body {
-        transform: scale(0.5);
-        overflow: hidden;
-    } */
-    .nav-content.active {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* 768 */
-@media (max-width: 768px) {
-    #nav-menu {
-        font-size: 18px;
-    }
-
-    .container:hover {
-        transform: unset;
-    }
-
-    .nav-content.active {
-        grid-template-columns: 1fr;
-    }
 }

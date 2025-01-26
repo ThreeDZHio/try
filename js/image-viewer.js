@@ -1,5 +1,5 @@
-import PhotoSwipeLightbox from "/dist/photoswipe-lightbox.esm.js";
-import PhotoSwipe from "/dist/photoswipe.esm.js";
+import PhotoSwipeLightbox from "../dist/photoswipe-lightbox.esm.js";
+import PhotoSwipe from "../dist/photoswipe.esm.js";
 
 const options = {
     gallery: ".image-gallery",
@@ -11,7 +11,7 @@ const options = {
     mouseMovePan: true,
     initialZoomLevel: "fit",
     secondaryZoomLevel: 2,
-    maxZoomLevel: 7,
+    maxZoomLevel: 4,
     pswpModule: PhotoSwipe,
 };
 
